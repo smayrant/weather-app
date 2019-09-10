@@ -7,12 +7,31 @@ class HomepageNews extends Component {
 		this.props.getHomepageWeatherStories();
 	}
 	render () {
-		return <div>home page news</div>;
+		console.log(this.props);
+		return (
+			// If there is data returned, display the news items, otherwise display a loading message
+			<div>
+				{this.props.newsItems.length > 0 ? (
+					<div>
+						<div
+							style={{ backgroundImage: `url(${this.props.newsItems[0].urlToImage})` }}
+							className="main-news-item-container"
+						>
+							<h4>{this.props.newsItems[0].title}</h4>
+						</div>
+					</div>
+				) : (
+					<div>Loading...</div>
+				)}
+			</div>
+		);
 	}
 }
 
 const mapStateToProps = state => {
-	console.log(state);
+	return {
+		newsItems: state.newsItems
+	};
 };
 
 export default connect(mapStateToProps, { getHomepageWeatherStories })(HomepageNews);
