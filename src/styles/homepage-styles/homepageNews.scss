@@ -1,6 +1,10 @@
-.main-news-item-container {
-	height: 300px;
-	background-position: center; /* Center the image */
-	background-repeat: no-repeat; /* Do not repeat the image */
-	background-size: cover;
+.main-news-item {
+	&-image {
+		max-width: 100%;
+		height: auto;
+	}
+
+	&-title {
+		margin-top: .5rem;
+	}
 }
