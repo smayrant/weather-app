@@ -8,7 +8,8 @@ const NewsItemList = ({ newsItems }) => {
 		return index > 0;
 	});
 	return (
-		<div>
+		<div className="ui container">
+			<h5>Trending Topics</h5>
 			{firstNewsItemRemoved.map(newsItem => {
 				return <NewsItem key={uuid.v4()} newsItem={newsItem} />;
 			})}

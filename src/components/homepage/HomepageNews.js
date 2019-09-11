@@ -26,7 +26,7 @@ class HomepageNews extends Component {
 				) : (
 					<div className="ui segment">
 						<div className="ui active inverted dimmer">
-							<div className="ui text loader">Loading...</div>
+							<div className="ui text loader">Loading Content...</div>
 						</div>
 						<p />
 					</div>

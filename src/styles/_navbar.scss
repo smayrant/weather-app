@@ -1,0 +1,13 @@
+.navbar {
+	padding: 1rem 0rem;
+}
+
+.navbar-content-container {
+	display: flex !important;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#menu-icon {
+	font-size: 1.5em;
+}

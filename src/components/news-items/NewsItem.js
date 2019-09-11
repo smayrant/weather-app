@@ -4,11 +4,12 @@ const NewsItem = ({ newsItem }) => {
 	return (
 		<div className="ui relaxed divided list">
 			<div className="item">
-				<img className="ui image" src={newsItem.urlToImage} alt="" />
+				<img className="ui image" id="news-item-image" src={newsItem.urlToImage} alt="News Item" />
 				<div className="content">
-					<div className="description">{newsItem.title}</div>
+					<p className="description news-item-title">{newsItem.title}</p>
 				</div>
 			</div>
+			<div className="ui divider" />
 		</div>
 	);
 };
