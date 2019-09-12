@@ -11,7 +11,7 @@ const Navbar = () => {
 						<i className="search link icon" />
 					</form>
 				</div>
-				<i id="menu-icon" class="bars icon" />
+				<i id="menu-icon" className="bars icon" />
 			</div>
 		</div>
 	);

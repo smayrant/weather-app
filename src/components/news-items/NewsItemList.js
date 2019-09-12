@@ -1,17 +1,17 @@
 import React from "react";
 import NewsItem from "./NewsItem";
-import uuid from "uuid";
 
 const NewsItemList = ({ newsItems }) => {
 	// removes the first item from the array since it has already been displayed as the main news item
 	const firstNewsItemRemoved = newsItems.filter((newsItem, index) => {
 		return index > 0;
 	});
+
 	return (
 		<div className="ui container">
 			<h5>Trending Topics</h5>
 			{firstNewsItemRemoved.map(newsItem => {
-				return <NewsItem key={uuid.v4()} newsItem={newsItem} />;
+				return <NewsItem key={newsItem.id} newsItem={newsItem} />;
 			})}
 		</div>
 	);
