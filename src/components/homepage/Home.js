@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import HomepageNews from "./HomepageNews";
-import Navbar from "../Navbar";
 import axios from "axios";
 
 class Home extends Component {
@@ -12,7 +11,6 @@ class Home extends Component {
 	render () {
 		return (
 			<div>
-				<Navbar />
 				<HomepageNews />
 			</div>
 		);

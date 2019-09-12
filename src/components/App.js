@@ -1,13 +1,15 @@
 import React from "react";
-import Home from "./homepage/Home";
 import { BrowserRouter, Route } from "react-router-dom";
+import Navbar from "./Navbar";
+import Home from "./homepage/Home";
 import NewsItemDetail from "../components/news-items/NewsItemDetail";
 
 function App () {
 	return (
 		<BrowserRouter>
 			<div className="App">
-				<Home />
+				<Navbar />
+				<Route exact path="/" component={Home} />
 				<Route path="/:news_item_id" component={NewsItemDetail} />
 			</div>
 		</BrowserRouter>

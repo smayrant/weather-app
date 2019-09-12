@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NewsItem = ({ newsItem }) => {
 	return (
 		<div className="ui relaxed divided list">
-			<Link to="/:news_item_id" className="item">
+			<Link to={`/${newsItem.id}`} className="item">
 				<img className="ui image" id="news-item-image" src={newsItem.urlToImage} alt="News Item" />
 				<div className="content">
 					<p className="description news-item-title">{newsItem.title}</p>
