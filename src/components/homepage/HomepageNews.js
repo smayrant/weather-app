@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { getHomepageWeatherStories } from "../../actions/homepageActions/getHomepageWeatherStories";
 import NewsItemList from "../news-items/NewsItemList";
 
@@ -9,17 +10,16 @@ class HomepageNews extends Component {
 		this.props.getHomepageWeatherStories();
 	}
 	render () {
-		console.log(this.props);
 		const { newsItems } = this.props;
 		return (
 			// If there is data returned, display the news items, otherwise display a loading message and spinner
 			<div>
 				{newsItems.length > 0 ? (
 					<div>
-						<div className="main-news-item">
+						<Link to={`/${newsItems[0].id}`} className="main-news-item">
 							<img className="main-news-item-image" src={newsItems[0].urlToImage} alt="Main article" />
 							<h4 className="main-news-item-title ui container">{newsItems[0].title}</h4>
-						</div>
+						</Link>
 						<div className="ui divider" />
 						<NewsItemList newsItems={newsItems} />
 					</div>

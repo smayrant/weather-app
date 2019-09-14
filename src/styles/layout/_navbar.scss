@@ -1,0 +1,39 @@
+.navbar {
+	background: $main-blue;
+	color: $light-text;
+	padding: 1rem 0rem;
+	&-content-container {
+		display: flex !important;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&-logo {
+		cursor: pointer;
+		color: $light-text;
+	}
+}
+
+#search-icon {
+	color: $light-text !important;
+}
+
+#menu-icon {
+	font-size: 1.5em;
+}
+
+::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: $light-text !important;
+	opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: $light-text !important;
+}
+
+::-ms-input-placeholder {
+	/* Microsoft Edge */
+	color: $light-text !important;
+}

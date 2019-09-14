@@ -10,16 +10,27 @@ class NewsItemDetail extends Component {
 		const newsItem = newsItems.filter(newsItem => {
 			return newsItem.id === this.props.match.params.news_item_id;
 		});
+
 		// if newsItem has data, display the data, otherwise display the error component
 		const renderNewsItem =
 			newsItem.length > 0 ? (
-				<div>
-					<h1>{newsItem[0].title}</h1>
-					<div className="article-info-container">
+				<div className="news-item-detail">
+					<h1 className="ui container news-item-detail-title">{newsItem[0].title}</h1>
+					<div className="ui container news-item-detail-info-container">
 						<p>Author: {newsItem[0].author}</p>
 						<p>Source: {newsItem[0].source.name}</p>
 					</div>
-					<img className="news-item-image" src={newsItem[0].urlToImage} alt="main article" />
+					<img className="news-item-detail-image" src={newsItem[0].urlToImage} alt="main article" />
+					<div className="news-item-detail-description ui container">
+						<p>{newsItem[0].description}</p>
+						<div className="ui divider" />
+					</div>
+					<div>
+						<p>{newsItem[0].content}</p>
+					</div>
+					<div className="link-to-article">
+						<a href={newsItem[0].url}>Read more here</a>
+					</div>
 				</div>
 			) : (
 				<Error />

@@ -1,5 +1,8 @@
-@import './_navbar.scss';
-@import './homepage-styles/_homepageNews.scss';
-@import './homepage-styles/newsItem';
-@import './newsItemDetail';
-@import './error';
+@import './utilities/variables';
+@import './layout/_navbar.scss';
+@import './news-items-styles/_homepageNews.scss';
+@import './news-items-styles/newsItem';
+@import './news-items-styles/newsItemDetail';
+@import './weather-styles/currentWeather.scss';
+@import './layout/error';
+@import './layout/footer';
