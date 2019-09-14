@@ -16,6 +16,9 @@ class CurrentWeather extends Component {
 				<div className="current-weather-description">
 					{currentWeather.weather ? currentWeather.weather[0].description : "Weather loading..."}
 				</div>
+				<div className="current-weather-temperature">
+					{currentWeather.main ? Math.round(currentWeather.main.temp) : "Weather loading..."}
+				</div>
 			</div>
 		) : (
 			<div>Loading...</div>
