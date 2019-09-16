@@ -1,11 +1,14 @@
 import currentWeatherAPI from "../../api-config/currentWeatherAPI";
+import store from "../../store/store";
 
 export const getCurrentWeather = () => {
+	const state = store.getState();
+
 	return async dispatch => {
 		try {
 			const response = await currentWeatherAPI.get("/weather?", {
 				params: {
-					zip: 20745,
+					zip: state.userInput,
 					appid: process.env.REACT_APP_WEATHER_API_KEY,
 					units: "imperial"
 				}
