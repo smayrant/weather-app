@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { getHomepageWeatherStories } from "../../actions/homepageActions/getHomepageWeatherStories";
 import NewsItemList from "../news-items/NewsItemList";
+import Navbar from "../Navbar";
 
 class HomepageNews extends Component {
 	// ensure the action retrieves data from the API is run once the component mounts
@@ -14,6 +15,7 @@ class HomepageNews extends Component {
 		return (
 			// If there is data returned, display the news items, otherwise display a loading message and spinner
 			<div>
+				<Navbar />
 				{newsItems.length > 0 ? (
 					<div>
 						<Link to={`/${newsItems[0].id}`} className="main-news-item">

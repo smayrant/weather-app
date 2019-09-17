@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Navbar from "./Navbar";
 import Home from "./homepage/Home";
 import NewsItemDetail from "../components/news-items/NewsItemDetail";
 import CurrentWeather from "../components/weather/CurrentWeather";
@@ -10,7 +9,6 @@ function App () {
 	return (
 		<BrowserRouter>
 			<div className="App">
-				<Navbar />
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Route path="/currentweather" component={CurrentWeather} />

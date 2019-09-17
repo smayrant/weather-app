@@ -16,17 +16,32 @@
 
 	&-container {
 		padding-top: 3em;
-		text-align: center;
 		color: $light-text;
 	}
 
 	&-city {
 		font-size: 2em;
 		margin-bottom: 1rem;
+		text-align: center;
 	}
 
 	&-temperature {
-		margin-top: 4rem;
+		margin: .5em 0rem;
 		font-size: 6em;
+	}
+
+	&-description {
+		text-transform: capitalize;
+	}
+
+	&-summary-inner-container {
+		margin-right: auto;
+	}
+
+	&-summary-container {
+		background: rgba(255, 255, 255, .25);
+		padding: 2em 1em;
+		border-radius: 7px;
+		display: flex;
 	}
 }

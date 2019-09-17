@@ -12,26 +12,30 @@ const Navbar = props => {
 					Weather
 				</Link>
 				<div className="navbar-right">
-					<form className="ui transparent icon input">
-						<input
-							onChange={props.getUserInput}
-							className="search-input"
-							type="text"
-							placeholder="Enter Zip Code"
-						/>
-						<Link to="/currentweather">
-							<i onClick={props.getCurrentWeather} id="search-icon" className="search link icon" />
-						</Link>
-					</form>
+					<div>
+						<form className="ui focus icon input" onSubmit={props.getCurrentWeather}>
+							<input
+								onChange={props.getUserInput}
+								id="search-input"
+								type="text"
+								placeholder="Enter Zip Code"
+								pattern="[0-9]+"
+							/>
+							<Link to="/currentweather">
+								{/* <i onClick={props.getCurrentWeather} id="search-icon" className="search link icon" /> */}
+								<button className="ui icon button">
+									<i className="search icon" />
+								</button>
+							</Link>
+						</form>
+					</div>
 				</div>
-				<i id="menu-icon" className="bars icon" />
 			</div>
 		</div>
 	);
 };
 
 const mapStateToProps = state => {
-	console.log(state);
 	return {
 		userInput: state.userInput
 	};
