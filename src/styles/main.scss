@@ -4,5 +4,21 @@
 @import './news-items-styles/newsItem';
 @import './news-items-styles/newsItemDetail';
 @import './weather-styles/currentWeather.scss';
+@import './weather-styles/mainWeather.scss';
 @import './layout/error';
 @import './layout/footer';
+
+// styling for sticky footer
+.main-content {
+	min-height: 100vh;
+}
+
+.main-content::after {
+	content: '';
+	display: block;
+}
+
+.footer-container,
+.main-content::after {
+	height: 100px;
+}

@@ -13,7 +13,7 @@ const Navbar = props => {
 				</Link>
 				<div className="navbar-right">
 					<div>
-						<form className="ui focus icon input" onSubmit={props.getCurrentWeather}>
+						<form className="ui focus icon input">
 							<input
 								onChange={props.getUserInput}
 								id="search-input"
@@ -21,7 +21,7 @@ const Navbar = props => {
 								placeholder="Enter Zip Code"
 								pattern="[0-9]+"
 							/>
-							<Link to="/currentweather">
+							<Link to="/weather">
 								{/* <i onClick={props.getCurrentWeather} id="search-icon" className="search link icon" /> */}
 								<button className="ui icon button">
 									<i className="search icon" />

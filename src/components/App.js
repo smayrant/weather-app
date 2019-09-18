@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./homepage/Home";
 import NewsItemDetail from "../components/news-items/NewsItemDetail";
-import CurrentWeather from "../components/weather/CurrentWeather";
+import MainWeather from "../components/weather/MainWeather";
 import Footer from "../components/Footer";
 
 function App () {
@@ -11,7 +11,7 @@ function App () {
 			<div className="App">
 				<Switch>
 					<Route exact path="/" component={Home} />
-					<Route path="/currentweather" component={CurrentWeather} />
+					<Route path="/weather" component={MainWeather} />
 					<Route path="/:news_item_id" component={NewsItemDetail} />
 				</Switch>
 				<Footer />
