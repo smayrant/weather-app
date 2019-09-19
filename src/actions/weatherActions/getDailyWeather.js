@@ -11,10 +11,10 @@ export const getDailyWeather = () => {
 					postal_code: state.userInput,
 					key: process.env.REACT_APP_WEATHER_API_KEY,
 					units: "I",
-					days: 5
+					days: 10
 				}
 			});
-			dispatch({ type: "GET_DAILY_WEATHER", payload: response });
+			dispatch({ type: "GET_DAILY_WEATHER", payload: response.data });
 		} catch (error) {
 			console.log(error);
 		}

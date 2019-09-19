@@ -1,0 +1,18 @@
+.weather-item {
+	background: #fff;
+	border-radius: 7px;
+	margin-top: 1em;
+	&-info {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	&-description {
+		padding: 1em 0em 0em 1em;
+	}
+
+	&-img {
+		max-width: 85px;
+	}
+}

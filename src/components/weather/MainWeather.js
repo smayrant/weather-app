@@ -9,15 +9,16 @@ import { getDailyWeather } from "../../actions/weatherActions/getDailyWeather";
 
 class MainWeather extends Component {
 	componentDidMount () {
-		this.props.getCurrentWeather();
-		// this.props.getDailyWeather();
+		// this.props.getCurrentWeather();
+		this.props.getDailyWeather();
 	}
 
 	// the rendered view is initially the current weather component
 	state = {
-		view: "current"
+		view: "daily"
 	};
 
+	// determine which forecast is
 	selectView = view => {
 		this.setState({
 			view: view
@@ -25,10 +26,10 @@ class MainWeather extends Component {
 	};
 
 	render () {
-		const { currentWeather } = this.props;
+		const { currentWeather, dailyWeather } = this.props;
 		let weather;
 		if (this.state.view === "daily") {
-			weather = <DailyWeather />;
+			weather = <DailyWeather dailyWeather={dailyWeather} />;
 		}
 
 		if (this.state.view === "current") {
