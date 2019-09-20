@@ -6,16 +6,18 @@ import DailyWeather from "./DailyWeather";
 import HourlyWeather from "./HourlyWeather";
 import { getCurrentWeather } from "../../actions/weatherActions/getCurrentWeather";
 import { getDailyWeather } from "../../actions/weatherActions/getDailyWeather";
+import { getHourlyWeather } from "../../actions/weatherActions/getHourlyWeather";
 
 class MainWeather extends Component {
 	componentDidMount () {
 		// this.props.getCurrentWeather();
-		this.props.getDailyWeather();
+		// this.props.getDailyWeather();
+		this.props.getHourlyWeather();
 	}
 
 	// the rendered view is initially the current weather component
 	state = {
-		view: "daily"
+		view: "hourly"
 	};
 
 	// determine which forecast is
@@ -26,7 +28,8 @@ class MainWeather extends Component {
 	};
 
 	render () {
-		const { currentWeather, dailyWeather } = this.props;
+		const { currentWeather, dailyWeather, hourlyWeather } = this.props;
+
 		let weather;
 		if (this.state.view === "daily") {
 			weather = <DailyWeather dailyWeather={dailyWeather} />;
@@ -37,7 +40,7 @@ class MainWeather extends Component {
 		}
 
 		if (this.state.view === "hourly") {
-			weather = <HourlyWeather />;
+			weather = <HourlyWeather hourlyWeather={hourlyWeather} />;
 		}
 		return (
 			<div className="main-weather main-content">
@@ -68,8 +71,9 @@ class MainWeather extends Component {
 const mapStateToProps = state => {
 	return {
 		currentWeather: state.weatherInfo,
-		dailyWeather: state.dailyInfo
+		dailyWeather: state.dailyInfo,
+		hourlyWeather: state.hourlyInfo
 	};
 };
 
-export default connect(mapStateToProps, { getCurrentWeather, getDailyWeather })(MainWeather);
+export default connect(mapStateToProps, { getCurrentWeather, getDailyWeather, getHourlyWeather })(MainWeather);

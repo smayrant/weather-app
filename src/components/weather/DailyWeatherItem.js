@@ -1,7 +1,11 @@
 import React from "react";
 
-const DailyWeatherItem = props => {
-	const { weatherItem } = props;
+const DailyWeatherItem = ({ weatherItem }) => {
+	let date = new Date(weatherItem.valid_date.replace(/-/g, "/").replace(/T.+/, ""));
+	const month = date.toLocaleString("default", { month: "short" });
+	const weekday = date.toLocaleString("default", { weekday: "short" });
+	const day = date.toLocaleString("default", { day: "numeric" });
+
 	return (
 		<div>
 			<div className="weather-item">
@@ -12,7 +16,7 @@ const DailyWeatherItem = props => {
 						src={`https://www.weatherbit.io/static/img/icons/${weatherItem.weather.icon}.png`}
 						alt="weather icon"
 					/>
-					<div className="weather-item-date">{weatherItem.datetime}</div>
+					<div className="weather-item-date">{`${weekday}, ${month} ${day}`}</div>
 					<div className="weather-item-temp">{Math.round(weatherItem.temp)}</div>
 				</div>
 			</div>
