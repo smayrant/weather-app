@@ -1,12 +1,9 @@
 import React from "react";
 
-const CurrentWeather = () => {
-	const { currentWeather } = this.props;
-
+const CurrentWeather = ({ currentWeather }) => {
 	// if the currentWeather object has data, such as the weather property, display the data, otherwise display a loading message
 	const renderCurrentWeather = currentWeather.hasOwnProperty("weather") ? (
 		<div className="current-weather-container ui container">
-			<div className="current-weather-city">{currentWeather.city_name}</div>
 			<div className="current-weather-summary-container">
 				<div className="current-weather-summary-inner-container">
 					<div className="current-weather-temperature">{Math.round(currentWeather.temp)}</div>

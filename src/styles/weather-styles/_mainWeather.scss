@@ -13,4 +13,11 @@
 			endColorstr='#eff6f7',
 			GradientType=0
 		); /* IE6-9 */
+
+	&-city-name {
+		font-size: 2em;
+		margin-top: 1rem;
+		text-align: center;
+		color: $light-text;
+	}
 }

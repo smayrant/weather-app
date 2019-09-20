@@ -10,17 +10,17 @@ import { getHourlyWeather } from "../../actions/weatherActions/getHourlyWeather"
 
 class MainWeather extends Component {
 	componentDidMount () {
-		// this.props.getCurrentWeather();
-		// this.props.getDailyWeather();
+		this.props.getCurrentWeather();
+		this.props.getDailyWeather();
 		this.props.getHourlyWeather();
 	}
 
 	// the rendered view is initially the current weather component
 	state = {
-		view: "hourly"
+		view: "current"
 	};
 
-	// determine which forecast is
+	// determine which forecast is displayed on click
 	selectView = view => {
 		this.setState({
 			view: view
@@ -29,7 +29,7 @@ class MainWeather extends Component {
 
 	render () {
 		const { currentWeather, dailyWeather, hourlyWeather } = this.props;
-
+		console.log(currentWeather);
 		let weather;
 		if (this.state.view === "daily") {
 			weather = <DailyWeather dailyWeather={dailyWeather} />;
@@ -60,6 +60,7 @@ class MainWeather extends Component {
 								</div>
 							</div>
 						</div>
+						<div className="main-weather-city-name">{currentWeather.city_name}</div>
 						{weather}
 					</main>
 				</article>

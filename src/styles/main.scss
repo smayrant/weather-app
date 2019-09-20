@@ -1,11 +1,12 @@
 @import './utilities/variables';
-@import './layout/_navbar.scss';
-@import './news-items-styles/_homepageNews.scss';
+@import './layout/navbar.scss';
+@import './news-items-styles/homepageNews.scss';
 @import './news-items-styles/newsItem';
 @import './news-items-styles/newsItemDetail';
 @import './weather-styles/currentWeather.scss';
 @import './weather-styles/mainWeather.scss';
 @import './weather-styles/dailyWeatherItem.scss';
+@import './weather-styles/hourlyWeatherItem.scss';
 @import './layout/error';
 @import './layout/footer';
 

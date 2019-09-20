@@ -22,7 +22,6 @@ const Navbar = props => {
 								pattern="[0-9]+"
 							/>
 							<Link to="/weather">
-								{/* <i onClick={props.getCurrentWeather} id="search-icon" className="search link icon" /> */}
 								<button className="ui icon button">
 									<i className="search icon" />
 								</button>
