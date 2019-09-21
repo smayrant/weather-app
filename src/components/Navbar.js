@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { getUserInput } from "../actions/weatherActions/getUserInput";
 import { getCurrentWeather } from "../actions/weatherActions/getCurrentWeather";
 
-const Navbar = props => {
+const Navbar = ({ getUserInput }) => {
 	return (
 		<div className="navbar">
 			<div className="navbar-content-container ui container">
@@ -15,7 +15,7 @@ const Navbar = props => {
 					<div>
 						<form className="ui focus icon input">
 							<input
-								onChange={props.getUserInput}
+								onChange={getUserInput}
 								id="search-input"
 								type="text"
 								placeholder="Enter Zip Code"
