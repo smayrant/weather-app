@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { getUserInput } from "../actions/weatherActions/getUserInput";
 import { getCurrentWeather } from "../actions/weatherActions/getCurrentWeather";
 
-const Navbar = ({ getUserInput }) => {
+const Navbar = ({ getUserInput, weatherInfo, clearCurrentWeather }) => {
 	return (
 		<div className="navbar">
 			<div className="navbar-content-container ui container">

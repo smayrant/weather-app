@@ -16,7 +16,7 @@ const HourlyWeatherList = props => {
 			<p />
 		</div>
 	);
-	console.log(hourlyWeather.data);
+
 	return <div>{renderedList}</div>;
 };
 

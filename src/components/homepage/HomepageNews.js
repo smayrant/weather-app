@@ -6,7 +6,7 @@ import NewsItemList from "../news-items/NewsItemList";
 import Navbar from "../Navbar";
 
 class HomepageNews extends Component {
-	// ensure the action retrieves data from the API is run once the component mounts
+	// ensure the action that retrieves data from the news API is run once the component mounts
 	componentDidMount () {
 		this.props.getHomepageWeatherStories();
 	}

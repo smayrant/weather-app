@@ -3,7 +3,7 @@ import DailyWeatherList from "./DailyWeatherList";
 
 const DailyWeather = props => {
 	const { dailyWeather } = props;
-	console.log(dailyWeather);
+
 	return (
 		<div className="ui container">
 			<div className="daily-weather-list-container">

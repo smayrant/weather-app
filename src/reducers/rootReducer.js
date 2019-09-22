@@ -4,15 +4,15 @@ import currentWeatherReducer from "./weatherReducers/currentWeatherReducer";
 import dailyWeatherReducer from "./weatherReducers/dailyWeatherReducer";
 import hourlyWeatherReducer from "./weatherReducers/hourlyWeatherReducer";
 import userInputReducer from "./weatherReducers/userInputReducer";
-import clearInputReducer from "./weatherReducers/clearInputReducer";
+// import clearWeatherReducer from "./weatherReducers/clearWeatherReducer";
 
 const rootReducer = combineReducers({
 	newsItems: newsReducer,
 	weatherInfo: currentWeatherReducer,
 	dailyInfo: dailyWeatherReducer,
 	hourlyInfo: hourlyWeatherReducer,
-	userInput: userInputReducer,
-	clearInput: clearInputReducer
+	userInput: userInputReducer
+	// clearWeather: clearWeatherReducer
 });
 
 export default rootReducer;

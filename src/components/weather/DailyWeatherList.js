@@ -3,7 +3,6 @@ import DailyWeatherItem from "./DailyWeatherItem";
 
 const DailyWeatherList = props => {
 	const { dailyWeatherList } = props;
-	console.log(dailyWeatherList.data);
 
 	const renderedList = dailyWeatherList.data ? (
 		dailyWeatherList.data.map(weatherItem => {
