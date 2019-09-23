@@ -1,16 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import noImage from "../../img/no-image.jpg";
 
 const NewsItem = ({ newsItem }) => {
 	return (
-		<div className="ui relaxed divided list">
+		<div id="news-item" className="ui relaxed divided list">
 			<Link to={`/${newsItem.id}`} className="item">
-				<img className="ui image" id="news-item-image" src={newsItem.urlToImage} alt="News Item" />
+				<div className="news-item-img-container">
+					<img
+						className="ui image"
+						id="news-item-image"
+						src={newsItem.urlToImage ? newsItem.urlToImage : noImage}
+						alt="News Item"
+					/>
+				</div>
 				<div className="content">
 					<p className="description news-item-title">{newsItem.title}</p>
 				</div>
 			</Link>
-			<div className="ui divider" />
+			<div id="news-item-divider" className="ui divider" />
 		</div>
 	);
 };

@@ -2,6 +2,30 @@
 	display: flex !important;
 	flex-direction: row;
 	cursor: pointer;
+	@media screen and (min-width: 768px) {
+		flex-direction: column;
+	}
+
+	.news-item-title {
+		@media screen and (min-width: 768px) {
+			flex-direction: column;
+		}
+	}
+}
+
+#news-item {
+	@media screen and (min-width: 768px) {
+		max-width: 183px;
+	}
+	@media screen and (min-width: 992px) {
+		max-width: 209px;
+	}
+}
+
+#news-item-divider {
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
 }
 
 #news-item-image {

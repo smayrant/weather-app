@@ -5,14 +5,9 @@ import { clearUserInput } from "../../actions/weatherActions/clearUserInput";
 import { clearCurrentWeather } from "../../actions/weatherActions/clearCurrentWeather";
 import { clearDailyWeather } from "../../actions/weatherActions/clearDailyWeather";
 import { clearHourlyWeather } from "../../actions/weatherActions/clearHourlyWeather";
-import axios from "axios";
 
 class Home extends Component {
 	componentDidMount () {
-		console.log(this.props);
-		axios.get(
-			`https://newsapi.org/v2/everything?q=weather&sortBy=popularity&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
-		);
 		// clear user input once the user has searched and navigates back to the home page
 		if (this.props.userInput.length > 0) {
 			this.props.clearUserInput();
@@ -38,7 +33,6 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => {
-	console.log(state);
 	return {
 		currentWeather: state.weatherInfo,
 		dailyWeather: state.dailyInfo,
