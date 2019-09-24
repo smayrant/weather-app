@@ -3,8 +3,10 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { getHomepageWeatherStories } from "../../actions/homepageActions/getHomepageWeatherStories";
 import { getHomepageTopHeadlines } from "../../actions/homepageActions/getHomepageTopHeadlines";
+import { getHomepageBusinessArticles } from "../../actions/homepageActions/getHomepageBusinessArticles";
 import NewsItemList from "../news-items/NewsItemList";
 import NonWeatherNewsItemList from "../news-items/NonWeatherNewsItemList";
+import BusinessNewsItemList from "../news-items/BusinessNewsItemList";
 import Navbar from "../Navbar";
 
 class HomepageNews extends Component {
@@ -12,10 +14,11 @@ class HomepageNews extends Component {
 	componentDidMount () {
 		this.props.getHomepageWeatherStories();
 		this.props.getHomepageTopHeadlines();
+		this.props.getHomepageBusinessArticles();
 	}
 	render () {
-		const { newsItems, topHeadlines } = this.props;
-		console.log(topHeadlines);
+		const { newsItems, topHeadlines, businessNews } = this.props;
+		console.log(businessNews);
 		return (
 			// If there is data returned, display the news items, otherwise display a loading message and spinner
 			<div>
@@ -45,6 +48,13 @@ class HomepageNews extends Component {
 								<NonWeatherNewsItemList newsItems={topHeadlines} />
 							</div>
 						</div>
+						<div className="ui container" id="top-headlines-container">
+							<div id="top-headlines-divider" className="ui divider" />
+							<h2>Business</h2>
+							<div className="top-headlines">
+								<BusinessNewsItemList newsItems={businessNews} />
+							</div>
+						</div>
 					</div>
 				) : (
 					<div className="ui segment">
@@ -62,8 +72,13 @@ class HomepageNews extends Component {
 const mapStateToProps = state => {
 	return {
 		newsItems: state.newsItems,
-		topHeadlines: state.topHeadlines
+		topHeadlines: state.topHeadlines,
+		businessNews: state.businessNews
 	};
 };
 
-export default connect(mapStateToProps, { getHomepageWeatherStories, getHomepageTopHeadlines })(HomepageNews);
+export default connect(mapStateToProps, {
+	getHomepageWeatherStories,
+	getHomepageTopHeadlines,
+	getHomepageBusinessArticles
+})(HomepageNews);
