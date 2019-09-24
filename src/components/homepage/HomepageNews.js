@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { getHomepageWeatherStories } from "../../actions/homepageActions/getHomepageWeatherStories";
 import { getHomepageTopHeadlines } from "../../actions/homepageActions/getHomepageTopHeadlines";
 import { getHomepageBusinessArticles } from "../../actions/homepageActions/getHomepageBusinessArticles";
+import { getHomepageTechnologyArticles } from "../../actions/homepageActions/getHomepageTechnologyArticles";
 import NewsItemList from "../news-items/NewsItemList";
 import NonWeatherNewsItemList from "../news-items/NonWeatherNewsItemList";
 import BusinessNewsItemList from "../news-items/BusinessNewsItemList";
+import TechnologyNewsItemList from "../news-items/TechnologyNewsItemList";
 import Navbar from "../Navbar";
 
 class HomepageNews extends Component {
@@ -15,9 +17,10 @@ class HomepageNews extends Component {
 		this.props.getHomepageWeatherStories();
 		this.props.getHomepageTopHeadlines();
 		this.props.getHomepageBusinessArticles();
+		this.props.getHomepageTechnologyArticles();
 	}
 	render () {
-		const { newsItems, topHeadlines, businessNews } = this.props;
+		const { newsItems, topHeadlines, businessNews, technologyNews } = this.props;
 		console.log(businessNews);
 		return (
 			// If there is data returned, display the news items, otherwise display a loading message and spinner
@@ -41,18 +44,25 @@ class HomepageNews extends Component {
 								<NewsItemList newsItems={newsItems} />
 							</div>
 						</div>
-						<div className="ui container" id="top-headlines-container">
+						<div className="ui container">
 							<div id="top-headlines-divider" className="ui divider" />
 							<h2>Top Headlines</h2>
 							<div className="top-headlines">
 								<NonWeatherNewsItemList newsItems={topHeadlines} />
 							</div>
 						</div>
-						<div className="ui container" id="top-headlines-container">
-							<div id="top-headlines-divider" className="ui divider" />
+						<div className="ui container">
+							<div id="business-headlines-divider" className="ui divider" />
 							<h2>Business</h2>
-							<div className="top-headlines">
+							<div className="business-headlines">
 								<BusinessNewsItemList newsItems={businessNews} />
+							</div>
+						</div>
+						<div className="ui container">
+							<div id="technology-headlines-divider" className="ui divider" />
+							<h2>Technology</h2>
+							<div className="technology-headlines">
+								<TechnologyNewsItemList newsItems={technologyNews} />
 							</div>
 						</div>
 					</div>
@@ -73,12 +83,14 @@ const mapStateToProps = state => {
 	return {
 		newsItems: state.newsItems,
 		topHeadlines: state.topHeadlines,
-		businessNews: state.businessNews
+		businessNews: state.businessNews,
+		technologyNews: state.technologyNews
 	};
 };
 
 export default connect(mapStateToProps, {
 	getHomepageWeatherStories,
 	getHomepageTopHeadlines,
-	getHomepageBusinessArticles
+	getHomepageBusinessArticles,
+	getHomepageTechnologyArticles
 })(HomepageNews);

@@ -1,14 +1,14 @@
 import baseAPINewsSearch from "../../api-config/baseAPINewsSearch";
 import uuid from "uuid";
 
-export const getHomepageBusinessArticles = () => {
+export const getHomepageTechnologyArticles = () => {
 	return async dispatch => {
 		try {
 			const response = await baseAPINewsSearch.get("/top-headlines", {
 				params: {
 					apiKey: process.env.REACT_APP_NEWS_API_KEY,
 					country: "us",
-					category: "business"
+					category: "technology"
 				}
 			});
 			console.log(response);
@@ -18,7 +18,7 @@ export const getHomepageBusinessArticles = () => {
 				return article;
 			});
 
-			dispatch({ type: "GET_HOMEPAGE_BUSINESS_ARTICLES", payload: responseWithId.slice(0, 6) });
+			dispatch({ type: "GET_HOMEPAGE_TECHNOLOGY_ARTICLES", payload: responseWithId.slice(0, 6) });
 		} catch (error) {
 			console.log(error);
 		}

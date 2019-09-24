@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import WeatherNavbar from "../weather/WeatherNavbar";
 import Error from "../Error";
+import noImage from "../../img/no-image-lg.jpg";
 
 class BusinessItemDetail extends Component {
 	render () {
@@ -24,7 +25,11 @@ class BusinessItemDetail extends Component {
 							Source: {newsItem[0].source.name ? newsItem[0].source.name : "Not provided"}
 						</p>
 					</div>
-					<img className="news-item-detail-image" src={newsItem[0].urlToImage} alt="main article" />
+					<img
+						className="news-item-detail-image"
+						src={newsItem[0].urlToImage ? newsItem[0].urlToImage : noImage}
+						alt="news article"
+					/>
 					<div className="news-item-detail-description ui container">
 						<p>{newsItem[0].description}</p>
 						<div className="ui divider" />

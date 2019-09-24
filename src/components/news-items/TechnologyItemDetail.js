@@ -4,13 +4,12 @@ import WeatherNavbar from "../weather/WeatherNavbar";
 import Error from "../Error";
 import noImage from "../../img/no-image-lg.jpg";
 
-class NewsItemDetail extends Component {
+class TechnologyItemDetail extends Component {
 	render () {
 		const { newsItems } = this.props;
-
 		// returns the news item with the id that matches the news_item_id parameter
 		const newsItem = newsItems.filter(newsItem => {
-			return newsItem.id === this.props.match.params.news_item_id;
+			return newsItem.id === this.props.match.params.technology_item_id;
 		});
 
 		// if newsItem has data, display the data, otherwise display the error component
@@ -59,8 +58,8 @@ class NewsItemDetail extends Component {
 const mapStateToProps = state => {
 	console.log(state);
 	return {
-		newsItems: state.newsItems
+		newsItems: state.technologyNews
 	};
 };
 
-export default connect(mapStateToProps)(NewsItemDetail);
+export default connect(mapStateToProps)(TechnologyItemDetail);

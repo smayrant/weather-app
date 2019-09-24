@@ -13,7 +13,9 @@
 	}
 }
 
-#news-item {
+#news-item,
+#technology-item,
+#business-item {
 	@media screen and (min-width: 768px) {
 		max-width: 183px;
 	}
@@ -22,7 +24,9 @@
 	}
 }
 
-#news-item-divider {
+#news-item-divider,
+#technology-item-divider,
+#business-item-divider {
 	@media screen and (min-width: 768px) {
 		display: none;
 	}
@@ -30,7 +34,6 @@
 
 #news-item-image {
 	max-width: 180px;
-
 	@media only screen and (max-width: 400px) {
 		max-width: 148px;
 	}
