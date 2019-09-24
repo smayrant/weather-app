@@ -5,7 +5,7 @@ import noImage from "../../img/no-image.jpg";
 const NewsItem = ({ newsItem }) => {
 	return (
 		<div id="news-item" className="ui relaxed divided list">
-			<Link to={`/weather-news/${newsItem.id}`} className="item">
+			<Link to={`/headlines/${newsItem.id}`} className="item">
 				<div className="news-item-img-container">
 					<img
 						className="ui image"

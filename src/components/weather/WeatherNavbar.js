@@ -8,9 +8,6 @@ const weatherNavbar = () => {
 				<Link to="/" className="navbar-logo">
 					Weather
 				</Link>
-				<div className="navbar-right">
-					<i id="menu-icon" className="bars icon" />
-				</div>
 			</div>
 		</div>
 	);

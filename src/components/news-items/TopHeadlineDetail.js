@@ -3,15 +3,15 @@ import { connect } from "react-redux";
 import WeatherNavbar from "../weather/WeatherNavbar";
 import Error from "../Error";
 
-class NewsItemDetail extends Component {
+class TopHeadlineDetail extends Component {
 	render () {
 		const { newsItems } = this.props;
-
+		console.log(newsItems);
 		// returns the news item with the id that matches the news_item_id parameter
 		const newsItem = newsItems.filter(newsItem => {
-			return newsItem.id === this.props.match.params.news_item_id;
+			return newsItem.id === this.props.match.params.top_headline_id;
 		});
-
+		console.log(newsItem);
 		// if newsItem has data, display the data, otherwise display the error component
 		const renderNewsItem =
 			newsItem.length > 0 ? (
@@ -54,8 +54,8 @@ class NewsItemDetail extends Component {
 const mapStateToProps = state => {
 	console.log(state);
 	return {
-		newsItems: state.newsItems
+		newsItems: state.topHeadlines
 	};
 };
 
-export default connect(mapStateToProps)(NewsItemDetail);
+export default connect(mapStateToProps)(TopHeadlineDetail);

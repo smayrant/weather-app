@@ -24,7 +24,7 @@ class HomepageNews extends Component {
 					<div>
 						<div id="homepage-news-container" className="ui container">
 							<div className="homepage-news-main-item">
-								<Link to={`/${newsItems[0].id}`} className="main-news-item">
+								<Link to={`/weather-news/${newsItems[0].id}`} className="main-news-item">
 									<img
 										className="main-news-item-image"
 										src={newsItems[0].urlToImage}

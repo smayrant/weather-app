@@ -2,11 +2,25 @@
 	&-image {
 		max-width: 100%;
 		height: auto;
-		margin-top: 1em;
+	}
+
+	&-title {
+		margin-top: .5em !important;
+		font-size: 1.5em;
 	}
 
 	&-description {
 		margin-top: 1em;
+	}
+
+	&-info-container {
+		display: flex !important;
+		font-size: .9em;
+		color: lighten(#333, 30%);
+	}
+
+	&-author {
+		margin-right: 1em;
 	}
 }
 
