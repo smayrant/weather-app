@@ -1,6 +1,11 @@
 .current-weather {
 	&-container {
 		color: $light-text;
+		display: flex !important;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
 	}
 
 	&-temperature {
@@ -13,7 +18,7 @@
 	}
 
 	&-summary-inner-container {
-		margin-right: auto;
+		margin-right: 1em;
 	}
 
 	&-summary-container {
@@ -22,6 +27,8 @@
 		padding: 2em 1em;
 		border-radius: 7px;
 		display: flex;
+		justify-content: center;
+		max-width: 375px;
 	}
 
 	&-details {
@@ -30,6 +37,8 @@
 		padding: 1em;
 		border-radius: 7px;
 		margin-top: 2em;
+		width: 100%;
+		max-width: 450px;
 	}
 
 	&-feels-like-temp {

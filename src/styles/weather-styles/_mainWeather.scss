@@ -1,5 +1,4 @@
 .main-weather {
-	// height: 100vh;
 	background: #506ed1; /* Old browsers */
 	background: -moz-linear-gradient(top, #506ed1 50%, #eff6f7 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, #506ed1 50%, #eff6f7 100%); /* Chrome10-25,Safari5.1-6 */
@@ -16,7 +15,7 @@
 
 	&-city-name {
 		font-size: 2em;
-		margin-top: 1rem;
+		margin-top: 2rem;
 		text-align: center;
 		color: $light-text;
 	}
