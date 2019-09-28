@@ -1,4 +1,5 @@
 @import './utilities/variables';
+@import './utilities/mixins';
 @import './layout/navbar.scss';
 @import './news-items-styles/homepageNews.scss';
 @import './news-items-styles/newsItem';
@@ -28,5 +29,4 @@
 
 body {
 	font-family: 'Noto Sans', sans-serif;
-	font-weight: 700;
 }

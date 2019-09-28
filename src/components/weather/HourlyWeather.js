@@ -3,7 +3,7 @@ import HourlyWeatherList from "./HourlyWeatherList";
 
 const HourlyWeather = ({ hourlyWeather }) => {
 	return (
-		<div className="ui container hourly-weather-container">
+		<div className="ui container">
 			<HourlyWeatherList hourlyWeather={hourlyWeather} />
 		</div>
 	);

@@ -21,6 +21,15 @@
 	margin-top: 1em;
 	.item {
 		.news-item-img-container {
+			// height: 200px;
+			// width: 200px;
+			// overflow: hidden;
+
+			// img {
+			// 	width: 300px;
+			// 	vertical-align: bottom;
+			// 	height: auto;
+			// }
 			@media screen and (min-width: 768px) {
 				height: 129px;
 				width: 100%;

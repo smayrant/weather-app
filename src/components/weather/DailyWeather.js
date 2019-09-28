@@ -6,9 +6,7 @@ const DailyWeather = props => {
 
 	return (
 		<div className="ui container">
-			<div className="daily-weather-list-container">
-				<DailyWeatherList dailyWeatherList={dailyWeather} />
-			</div>
+			<DailyWeatherList dailyWeatherList={dailyWeather} />
 		</div>
 	);
 };

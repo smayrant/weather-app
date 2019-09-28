@@ -38,11 +38,15 @@
 	&-title {
 		margin-top: .5rem;
 		font-size: 1em;
+		color: #333;
 		@media screen and (min-width: 500px) {
 			font-size: 1.5em;
 		}
 		@media screen and (min-width: 768px) {
 			font-size: 2em;
+		}
+		@media screen and (min-width: 992px) {
+			font-size: 2.5em;
 		}
 	}
 }
@@ -65,5 +69,12 @@
 		@media screen and (min-width: 1200px) {
 			max-width: 280px;
 		}
+	}
+}
+
+#business-headlines-divider,
+#technology-headlines-divider {
+	@media screen and (max-width: 767px) {
+		display: none;
 	}
 }

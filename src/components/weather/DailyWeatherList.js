@@ -16,7 +16,7 @@ const DailyWeatherList = props => {
 			<p />
 		</div>
 	);
-	return <div>{renderedList}</div>;
+	return <div className="daily-weather-list-container">{renderedList}</div>;
 };
 
 export default DailyWeatherList;
