@@ -2,6 +2,9 @@
 	background: $main-blue;
 	color: $light-text;
 	padding: 1rem 0rem;
+	-webkit-box-shadow: 0px 7px 31px -16px rgba(51, 51, 51, 1);
+	-moz-box-shadow: 0px 7px 31px -16px rgba(51, 51, 51, 1);
+	box-shadow: 0px 7px 31px -16px rgba(51, 51, 51, 1);
 	&-content-container {
 		display: flex !important;
 		flex-direction: row;
@@ -11,7 +14,11 @@
 
 	&-logo {
 		cursor: pointer;
-		color: $light-text;
+		width: 1em;
+		height: auto;
+		img {
+			width: 3.3em;
+		}
 	}
 }
 

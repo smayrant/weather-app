@@ -11,7 +11,6 @@ export const getHomepageTechnologyArticles = () => {
 					category: "technology"
 				}
 			});
-			console.log(response);
 			const responseWithId = response.data.articles.map(article => {
 				//ensures each news item will have a unique id by adding an id property
 				article.id = uuid.v4();

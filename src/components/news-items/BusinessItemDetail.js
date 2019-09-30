@@ -35,7 +35,14 @@ class BusinessItemDetail extends Component {
 						<div className="ui divider" />
 					</div>
 					<div>
-						<p>{newsItem[0].content ? newsItem[0].content : "Content preview not available."}</p>
+						{/* display the content preview if it is available, removing the text that displays the amount of characters left, otherwise display a content unavailable message */}
+						<p>
+							{newsItem[0].content ? (
+								newsItem[0].content.replace(/\[.*?\]/, "")
+							) : (
+								"Content preview not available."
+							)}
+						</p>
 					</div>
 					<div className="link-to-article">
 						<a target="_blank" rel="noopener noreferrer" href={newsItem[0].url}>

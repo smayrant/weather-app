@@ -16,7 +16,7 @@
 		@media screen and (min-width: 768px) {
 			flex-direction: column;
 			margin-top: 1em;
-			font-size: 1.1em;
+			font-size: 1em;
 		}
 	}
 }
@@ -44,6 +44,7 @@
 #technology-item-image {
 	max-width: 180px;
 	border-radius: 5px;
+	@include box-shadow;
 	@media only screen and (max-width: 400px) {
 		max-width: 148px;
 	}

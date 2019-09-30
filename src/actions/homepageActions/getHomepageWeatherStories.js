@@ -7,8 +7,6 @@ export const getHomepageWeatherStories = () => {
 			const response = await baseAPINewsSearch.get("/everything", {
 				params: {
 					apiKey: process.env.REACT_APP_NEWS_API_KEY,
-					sortBy: "popularity",
-					sources: "the-washington-post, cnn",
 					q: "weather"
 				}
 			});

@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { getUserInput } from "../actions/weatherActions/getUserInput";
 import { getCurrentWeather } from "../actions/weatherActions/getCurrentWeather";
-
+import logo from "../img/weather.svg";
 const Navbar = ({ getUserInput, weatherInfo, clearCurrentWeather }) => {
 	return (
 		<div className="navbar">
 			<div className="navbar-content-container ui container">
 				<Link to="/" className="navbar-logo">
-					Weather
+					<img src={logo} alt="logo" />
 				</Link>
 				<div className="navbar-right">
 					<div>

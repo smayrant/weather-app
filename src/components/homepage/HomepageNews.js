@@ -21,7 +21,6 @@ class HomepageNews extends Component {
 	}
 	render () {
 		const { newsItems, topHeadlines, businessNews, technologyNews } = this.props;
-		console.log(businessNews);
 		return (
 			// If there is data returned, display the news items, otherwise display a loading message and spinner
 			<div>

@@ -4,8 +4,8 @@ import HourlyWeatherItem from "./HourlyWeatherItem";
 const HourlyWeatherList = props => {
 	const { hourlyWeather } = props;
 
-	const renderedList = hourlyWeather.data ? (
-		hourlyWeather.data.map(weatherItem => {
+	const renderedList = hourlyWeather ? (
+		hourlyWeather.map(weatherItem => {
 			return <HourlyWeatherItem key={weatherItem.timestamp_local} hourlyWeatherItem={weatherItem} />;
 		})
 	) : (
