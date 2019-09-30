@@ -64,7 +64,6 @@ class NewsItemDetail extends Component {
 }
 
 const mapStateToProps = state => {
-	console.log(state);
 	return {
 		newsItems: state.newsItems
 	};

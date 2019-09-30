@@ -11,7 +11,6 @@ class TopHeadlineDetail extends Component {
 		const newsItem = newsItems.filter(newsItem => {
 			return newsItem.id === this.props.match.params.top_headline_id;
 		});
-		console.log(newsItem);
 		// if newsItem has data, display the data, otherwise display the error component
 		const renderNewsItem =
 			newsItem.length > 0 ? (
@@ -63,7 +62,6 @@ class TopHeadlineDetail extends Component {
 }
 
 const mapStateToProps = state => {
-	console.log(state);
 	return {
 		newsItems: state.topHeadlines
 	};
