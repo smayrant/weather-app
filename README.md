@@ -29,7 +29,11 @@ git clone https://github.com/smayrant/weather-app.git
 npm install 
 ```
 
-3. Start the server
+3. Retrieve API keys from Weatherbit.io and NewsAPI.org
+
+4. In the src/actions folder, insert your API keys into their respective news and weather related actions. These actions begin with 'get'.
+
+5. Start the server
 
 ```
 npm start     # React :3000
