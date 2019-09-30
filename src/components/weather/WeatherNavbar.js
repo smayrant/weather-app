@@ -7,7 +7,10 @@ const weatherNavbar = () => {
 		<div className="navbar">
 			<div className="navbar-content-container ui container">
 				<Link to="/" className="navbar-logo">
-					<img src={logo} alt="logo" />
+					<div className="navbar-logo-title">
+						<img src={logo} alt="logo" />
+						<p className="navbar-title weather-navbar-title">React News</p>
+					</div>
 				</Link>
 			</div>
 		</div>

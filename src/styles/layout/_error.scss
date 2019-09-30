@@ -1,5 +1,5 @@
 .main-body {
-	background: lighten(#4b56ab, 19%);
+	background: #aa87f3;
 }
 
 .error-img {
@@ -21,7 +21,7 @@
 
 	.home-link {
 		font-size: 2rem;
-		color: #d66363;
+		color: darken($main-blue, 10%);
 		text-decoration: none;
 		cursor: pointer;
 	}

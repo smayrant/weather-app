@@ -48,9 +48,7 @@ const CurrentWeather = ({ currentWeather }) => {
 				</div>
 			</div>
 		</div>
-	) : (
-		<div>Loading...</div>
-	);
+	) : null;
 
 	return <div className="current-weather">{renderCurrentWeather}</div>;
 };

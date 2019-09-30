@@ -14,11 +14,23 @@
 
 	&-logo {
 		cursor: pointer;
-		width: 1em;
 		height: auto;
 		img {
 			width: 3.3em;
 		}
+	}
+}
+
+.navbar-title {
+	@media screen and (max-width: 390px) {
+		display: none;
+	}
+	color: $light-text;
+	margin-left: .5em;
+	font-size: 1em;
+	@media screen and (min-width: 450px) {
+		display: inline;
+		font-size: 1.5em;
 	}
 }
 

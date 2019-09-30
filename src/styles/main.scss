@@ -5,6 +5,7 @@
 @import './news-items-styles/newsItem';
 @import './news-items-styles/newsItemDetail';
 @import './news-items-styles//top-headlines';
+@import './weather-styles/weatherNavbar.scss';
 @import './weather-styles/currentWeather.scss';
 @import './weather-styles/mainWeather.scss';
 @import './weather-styles/dailyWeatherItem.scss';
@@ -28,5 +29,5 @@
 }
 
 body {
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans JP', sans-serif;
 }

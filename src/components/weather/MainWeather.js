@@ -26,7 +26,7 @@ class MainWeather extends Component {
 		view: "current"
 	};
 
-	// determine which forecast is displayed on click
+	// change which type of forecast is displayed on click
 	selectView = view => {
 		this.setState({
 			view: view
@@ -36,6 +36,7 @@ class MainWeather extends Component {
 	render () {
 		const { currentWeather, dailyWeather, hourlyWeather } = this.props;
 
+		// the weather component to display is determined by which component the user clicks on
 		let weather;
 		if (this.state.view === "daily") {
 			weather = <DailyWeather dailyWeather={dailyWeather} />;
@@ -49,6 +50,7 @@ class MainWeather extends Component {
 			weather = <HourlyWeather hourlyWeather={hourlyWeather} />;
 		}
 
+		// ensure the current weather object has data properties before rendering the data. Otherwise, display the error component
 		const renderMainWeather =
 			Object.getOwnPropertyNames(currentWeather).length > 0 ? (
 				<div className="forecast-type-strip">
