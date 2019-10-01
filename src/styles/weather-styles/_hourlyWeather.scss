@@ -24,7 +24,7 @@
 #show-more-btn {
 	margin-left: auto;
 	margin-right: auto;
-	width: 25%;
+	width: 100%;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #506ed1), color-stop(1, #2f4aa3));
 	background: -moz-linear-gradient(top, #506ed1 5%, #2f4aa3 100%);
 	background: -webkit-linear-gradient(top, #506ed1 5%, #2f4aa3 100%);
@@ -43,6 +43,12 @@
 	font-weight: bold;
 	padding: .8em 2em;
 	text-decoration: none;
+	@media screen and (min-width: 679px) {
+		width: 75%;
+	}
+	@media screen and (min-width: 992px) {
+		width: 50%;
+	}
 }
 #show-more-btn:hover {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2f4aa3), color-stop(1, #506ed1));
